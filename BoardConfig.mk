@@ -14,13 +14,12 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/lenovo/a6000
+LOCAL_PATH := device/lenovo/wt86528
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Variants
-
-TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm8916,Kraft-A6000,wt86518
+TARGET_OTA_ASSERT_DEVICE := wt86528,K31-t3,K31-t7,A6010,A6010 Plus
 
 # Architecture
 
@@ -41,8 +40,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
-TARGET_KERNEL_SOURCE := kernel/lenovo/msm8916
-TARGET_KERNEL_CONFIG := lineageos-wt86518_defconfig
+TARGET_KERNEL_SOURCE := kernel/lenovo/wt86528
+TARGET_KERNEL_CONFIG := lineageos-wt86528_defconfig
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 
@@ -115,7 +114,7 @@ USE_OPENGL_RENDERER := true
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_a6000
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-TARGET_RECOVERY_DEVICE_MODULES := libinit_a6000
+TARGET_RECOVERY_DEVICE_MODULES := libinit_wt86528
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -169,4 +168,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 
 # Inherit from the proprietary version
--include vendor/lenovo/a6000/BoardConfigVendor.mk
+-include vendor/lenovo/wt86528/BoardConfigVendor.mk

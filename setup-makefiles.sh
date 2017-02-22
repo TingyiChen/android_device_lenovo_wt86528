@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-DEVICE=a6000
+DEVICE=wt86528
 VENDOR=lenovo
 
 # Load extractutils and do some sanity checks

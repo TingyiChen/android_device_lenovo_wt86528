@@ -17,7 +17,7 @@
 
 #set -e
 
-export DEVICE=a6000
+export DEVICE=wt86528
 export VENDOR=lenovo
 
 # Load extractutils and do some sanity checks

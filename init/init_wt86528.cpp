@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
+   Copyright (c) 2017, IsaacChen<tingyi364@gmail.com>
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -222,7 +223,7 @@ void init_target_properties()
      char modem_version[IMG_VER_BUF_LEN];
      int rc;
     std::string product = property_get("ro.product.name");
-    if ((strstr(product.c_str(), "a6000") == NULL))
+    if ((strstr(product.c_str(), "wt86528") == NULL))
      return;
     rc = get_img_version(modem_version, IMG_VER_BUF_LEN);
     if (!rc) {
