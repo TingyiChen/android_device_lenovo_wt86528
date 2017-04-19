@@ -1,3 +1,4 @@
+
 This repository contains device configuration for Lenovo K31/A6010 Series (wt86528)
 
 Basic   | Spec Sheet
@@ -12,3 +13,5 @@ Battery | 2300 mAh
 Display | 720x1280 pixels, 5.0 (~320 ppi pixel density)
 Rear Camera  | 8 mp, 3264x2448 pixels, autofocus
 Front Camera | 5 mp, 1600x1200 pixels
+
+![Lenovo K31-t3](http://cdn2.gsmarena.com/vv/pics/lenovo/lenovo-a6010-1.jpg "Lenovo K31-t3")
