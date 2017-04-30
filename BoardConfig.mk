@@ -15,28 +15,21 @@
 
 -include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/yu/lettuce
-
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+DEVICE_PATH := device/lenovo/wt86528
 
 # Kernel
-ifneq ($(FORCE_32_BIT),true)
-TARGET_KERNEL_CONFIG := cyanogenmod_lettuce-64_defconfig
-else
-TARGET_KERNEL_CONFIG := cyanogenmod_lettuce_defconfig
-endif
+TARGET_KERNEL_SOURCE := kernel/lenovo/wt86528
+TARGET_KERNEL_CONFIG := wt86528-perf_defconfig
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Camera
 BOARD_CAMERA_SENSORS := \
     ov5670_q5v41b \
-    ov8865_q8v18a
+    ov8865_q8v18a \
+    ov13850_q13v06k
 TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
-
-# CMHW
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw/src
 
 # CPU
 TARGET_CPU_CORTEX_A53 := true
@@ -55,21 +48,16 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 67108864
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 13042155008
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1887436800
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 5132779520
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 BOARD_SEPOLICY_DIRS += \
-    device/yu/lettuce/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    file.te \
-    system_server.te \
-    file_contexts
+    device/lenovo/wt86528/sepolicy
 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/yu/lettuce/BoardConfigVendor.mk
+-include vendor/lenovo/wt86528/BoardConfigVendor.mk

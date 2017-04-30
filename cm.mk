@@ -12,24 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/yu/lettuce/full_lettuce.mk)
+$(call inherit-product, device/lenovo/wt86528/full_wt86528.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_lettuce
-BOARD_VENDOR := yu
-PRODUCT_DEVICE := lettuce
+PRODUCT_NAME := cm_wt86528
+BOARD_VENDOR := lenovo
+PRODUCT_DEVICE := wt86528
 
-PRODUCT_GMS_CLIENTID_BASE := android-micromax
+PRODUCT_GMS_CLIENTID_BASE := android-wt86528
 
-TARGET_VENDOR_PRODUCT_NAME := YUPHORIA
-TARGET_VENDOR_DEVICE_NAME := YUPHORIA
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=YUPHORIA PRODUCT_NAME=YUPHORIA
-
-## Use the latest approved GMS identifiers unless running a signed build
-ifneq ($(SIGN_BUILD),true)
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=YU/YUPHORIA/YUPHORIA:5.1.1/LMY49J/YOG4PAS8A8:user/release-keys \
-    PRIVATE_BUILD_DESC="YUPHORIA-user 5.1.1 LMY49J YOG4PAS8A8 release-keys"
-endif
+TARGET_VENDOR_PRODUCT_NAME := LENOVO
+TARGET_VENDOR_DEVICE_NAME := LENOVO
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=LENOVO PRODUCT_NAME=LENOVO
