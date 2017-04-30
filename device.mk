@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libmm-qcamera
 
+# Init
+PRODUCT_PACKAGES += \
+    libinit_msm
+
 # Charger
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.usb.id.charge=3009 \
