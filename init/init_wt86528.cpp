@@ -1,6 +1,7 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
    Copyright (C) 2017, Harshit Jain
+   Copyright (C) 2017, Isaac Chen
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are

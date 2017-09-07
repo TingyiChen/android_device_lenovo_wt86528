@@ -1,2 +1,2 @@
-# A6000 init
-TARGET_LIBINIT_MSM8916_DEFINES_FILE := device/lenovo/a6000/init/init_a6000.cpp
+# Init
+TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(DEVICE_PATH)/init/init_wt86528.cpp

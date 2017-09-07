@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/lenovo/a6000/full_a6000.mk)
+$(call inherit-product, device/lenovo/wt86528/full_wt86528.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -21,14 +21,12 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm8916,Kraft-A6000,wt86518
+TARGET_OTA_ASSERT_DEVICE := wt86528,K31-t3,A6010,A6010 Plus
 
-PRODUCT_NAME := lineage_a6000
+PRODUCT_NAME := lineage_wt86528
 BOARD_VENDOR := Lenovo
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="Lenovo/Kraft-A6000/Kraft-A6000:5.0.2/LRX22G/Kraft-A6000_S061_160727:user/release-keys" \
-    PRIVATE_BUILD_DESC="Kraft-A6000-user 5.0.2 LRX22G Kraft-A6000_S061_160727 release-keys"
-
-PRODUCT_GMS_CLIENTID_BASE := android-lenovo
+    BUILD_FINGERPRINT="Lenovo/A6010/A6010:5.0.2/LRX22G/A6010_S1118_160825_16G_SF:user/release-keys" \
+    PRIVATE_BUILD_DESC="A6010-user 5.0.2 LRX22G A6010_S1118_160825_16G_SF release-keys"

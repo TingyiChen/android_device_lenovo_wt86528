@@ -19,18 +19,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from a6000 device
-$(call inherit-product, device/lenovo/a6000/device.mk)
+$(call inherit-product, device/lenovo/wt86528/device.mk)
 
 # Device identifier. This must come after all inclusions
 TARGET_VENDOR := Lenovo
-PRODUCT_DEVICE := a6000
-PRODUCT_NAME := full_a6000
+PRODUCT_DEVICE := wt86528
+PRODUCT_NAME := full_wt86528
 PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := A6000
 PRODUCT_MANUFACTURER := Lenovo
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-     PRODUCT_MODEL="Lenovo A6000" \
-     PRODUCT_NAME="Kraft-A6000" \
-     PRODUCT_DEVICE="Kraft-A6000" \
-     ro.build.product=Kraft-A6000
+# Set Model Through Scripts
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.product.model
+
+PRODUCT_GMS_CLIENTID_BASE := android-lenovo
+
+TARGET_VENDOR_PRODUCT_NAME := wt86528
